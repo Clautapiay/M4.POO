@@ -11,14 +11,14 @@ class Pizza():
     #atributos
     valor = "$10.000 pesos"
     tamano = "Familiar"
-    proteicos_posibles = ["Pollo", "Carne", "Carne vegetal"]
-    vegetales_posibles = ["Tomate", "Aceituna", "Champiñones"]
-    masa_posible = ["Tradicional", "Delgada"]
+    proteicos_posibles = ["pollo", "carne", "carne vegetal"]
+    vegetales_posibles = ["tomate", "aceituna", "champiñones"]
+    masa_posible = ["tradicional", "delgada"]
 
     @staticmethod
     #validar elemento dentro de la lista
     def validar_elemento(elemento,valores_posibles):
-        return elemento.title() in valores_posibles
+        return elemento.lower() in valores_posibles
     
 
     def crear_pizza(self:str):
@@ -30,17 +30,17 @@ class Pizza():
     
 
     def realizar_pedido(self):
-        self.masa = input(f"Ingrese el tipo de masa que desea (Tradicional/Delgada): ".title())
-        self.ing_proteico = input(f"Ingrese la proteina que desea (Pollo/Carne/Proteina Vegetal): ".title())
-        self.ing_vegetal1 = input(f"Ingrese el primer vegetal que desea (Tomate/Aceitunas/Champiñones): ".title())
-        self.ing_vegetal2 = input(f"Ingrese el segundo vegetal que desea (Tomate/Aceitunas/Champiñones): ".title())
+        self.masa = input(f"Ingrese el tipo de masa que desea (Tradicional/Delgada): ")
+        self.ing_proteico = input(f"Ingrese la proteina que desea (Pollo/Carne/Proteina Vegetal): ")
+        self.ing_vegetal1 = input(f"Ingrese el primer vegetal que desea (Tomate/Aceitunas/Champiñones): ")
+        self.ing_vegetal2 = input(f"Ingrese el segundo vegetal que desea (Tomate/Aceitunas/Champiñones): ")
 
 #vaidar si ingredientes y tipo de masa son validos
     def es_valida(self):
         
-        ingredientes_proteicos = ["Carne", "Pollo", "Carne vegetal"]
-        ingredientes_vegetales = ["Aceitunas", "Champiñones", "Tomate"]
-        masas = ["Tradicional", "Delgada"]
+        ingredientes_proteicos = ["carne", "pollo", "carne vegetal"]
+        ingredientes_vegetales = ["aceitunas", "champiñones", "tomate"]
+        masas = ["tradicional", "delgada"]
 
         proteico_valido = self.ing_proteico in ingredientes_proteicos
         vegetal1_valido = self.ing_vegetal1 in ingredientes_vegetales

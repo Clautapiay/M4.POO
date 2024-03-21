@@ -16,10 +16,10 @@ crear_pizza = Pizza()
 crear_pizza.realizar_pedido()
 print("Pizza creada")
 
-print("Imgrediente proteico:", crear_pizza.ing_proteico.title()) 
-print("Primer Imgrediente vegetal:", crear_pizza.ing_vegetal1.title())
-print("Segundo Imgrediente vegetal:", crear_pizza.ing_vegetal2.title())
-print("Tipo de masa:", crear_pizza.masa.title())   
+print("Imgrediente proteico:", crear_pizza.ing_proteico) 
+print("Primer Imgrediente vegetal:", crear_pizza.ing_vegetal1)
+print("Segundo Imgrediente vegetal:", crear_pizza.ing_vegetal2)
+print("Tipo de masa:", crear_pizza.masa)   
 
 if crear_pizza.es_valida():
     print("Esta instancia es una pizza valida")

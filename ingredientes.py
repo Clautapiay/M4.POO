@@ -1,8 +1,8 @@
 from pizza import Pizza
 
-posibles_ingredientes = ["Pollo", "Vacuno", "Carne vegetal", "Tomate", "Aceitunas", "Champiñones"]
-print(Pizza.validar_elemento("Pollo", posibles_ingredientes))
-print(Pizza.validar_elemento("Pescado", posibles_ingredientes))
+posibles_ingredientes = ["pollo", "carne", "carne vegetal", "tomate", "aceitunas", "champiñones"]
+print(Pizza.validar_elemento("pollo", posibles_ingredientes))
+print(Pizza.validar_elemento("pescado", posibles_ingredientes))
 
-tipo_de_masa = ["Tradicional", "Delgada"]
+tipo_de_masa = ["tradicional", "delgada"]
 print(tipo_de_masa)
