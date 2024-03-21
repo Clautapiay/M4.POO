@@ -42,10 +42,10 @@ class Pizza():
         ingredientes_vegetales = ["aceitunas", "champiñones", "tomate"]
         masas = ["tradicional", "delgada"]
 
-        proteico_valido = self.ing_proteico in ingredientes_proteicos
-        vegetal1_valido = self.ing_vegetal1 in ingredientes_vegetales
-        vegetal2_valido = self.ing_vegetal2 in ingredientes_vegetales
-        masa_valida = self.masa in masas 
+        proteico_valido = self.validar_elemento(self.ing_proteico, ingredientes_proteicos)
+        vegetal1_valido = self.validar_elemento(self.ing_vegetal1, ingredientes_vegetales)
+        vegetal2_valido = self.validar_elemento(self.ing_vegetal2, ingredientes_vegetales)
+        masa_valida = self.validar_elemento(self.masa, masas) 
         print(proteico_valido, vegetal1_valido, vegetal2_valido, masa_valida)
 
         if proteico_valido and vegetal1_valido and vegetal2_valido and masa_valida:
